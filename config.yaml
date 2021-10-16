@@ -1,7 +1,7 @@
 settings:
-  title: 'Status Page'
-  url: 'https://status-page.eidam.dev' # used for Slack messages
-  logo: logo-192x192.png # image in ./public/ folder
+  title: 'Novacrypt Status Page'
+  url: 'https://status.novacrypt.org' # used for Slack messages
+  logo: novacrypt.webp # image in ./public/ folder
   daysInHistogram: 90 # number of days you want to display in histogram
   collectResponseTimes: true # collects avg response times from CRON locations
 
@@ -15,25 +15,28 @@ settings:
   dayInHistogramNotOperational: ' incident(s)' # xx incident(s) recorded
 
 monitors:
-  - id: workers-cloudflare-com # unique identifier
-    name: workers.cloudflare.com
-    description: 'You write code. They handle the rest.' # default=empty
-    url: 'https://workers.cloudflare.com/' # URL to fetch
-    method: GET # default=GET
-    expectStatus: 200 # operational status, default=200
-    followRedirect: false # should fetch follow redirects, default=false
-    linkable: false # allows the title to be a link, default=true
 
-  - id: www-cloudflare-com
-    name: www.cloudflare.com
-    description: 'Built for anything connected to the Internet.'
-    url: 'https://www.cloudflare.com'
+  - id: novacrypt-site
+    name: novacrypt.org
+    description: 'Novacrypt'
+    url: 'https://novacrypt.org'
     method: GET
     expectStatus: 200
     linkable: true # allows the title to be a link, default=true
-
-  - id: blog-cloudflare-com
-    name: The Cloudflare Blog
-    url: 'https://blog.cloudflare.com/'
+    
+    
+  - id: novacrypt-us
+    name: 'Novacrypt US Server'
+    description: 'Novacrypt US Server'
+    url: 'https://98.116.218.208:443/'
     method: GET
     expectStatus: 200
+    linkable: false # allows the title to be a link, default=true
+
+  - id: novacrypt-eu
+    name: 'Novacrypt EU Server'
+    description: 'Novacrypt EU Server'
+    url: 'https://3.122.229.191:443/ '
+    method: GET
+    expectStatus: 200
+    linkable: false 
