@@ -2,7 +2,7 @@ settings:
   title: 'Novacrypt Status Page'
   url: 'https://status.novacrypt.org' # used for Slack messages
   logo: novacrypt.webp # image in ./public/ folder
-  daysInHistogram: 90 # number of days you want to display in histogram
+  daysInHistogram: 30 # number of days you want to display in histogram
   collectResponseTimes: true # collects avg response times from CRON locations
 
   allmonitorsOperational: 'All Systems Operational'
